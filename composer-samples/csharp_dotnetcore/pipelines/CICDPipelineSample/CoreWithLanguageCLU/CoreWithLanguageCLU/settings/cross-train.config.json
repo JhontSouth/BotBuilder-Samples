@@ -2,14 +2,8 @@
   "CoreWithLanguageCLU.en-us": {
     "rootDialog": true,
     "triggers": {
-      "Welcome": [
-        "WelcomeDialog.en-us"
-      ],
       "Cancel": [
         "CancelDialog.en-us"
-      ],
-      "Feedback": [
-        "FeedbackDialog.en-us"
       ],
       "Help": [
         "HelpDialog.en-us"
