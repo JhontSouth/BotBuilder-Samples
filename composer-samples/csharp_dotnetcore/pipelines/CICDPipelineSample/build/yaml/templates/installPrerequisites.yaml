@@ -17,6 +17,6 @@ steps:
     customCommand: 'install -g @microsoft/botframework-cli'
 
 - task: UseDotNet@2
-  displayName: 'Use .Net Core sdk 3.1.x'
+  displayName: 'Use .Net Core sdk 5.0.x'
   inputs:
-    version: 3.1.x
+    version: 5.0.x
