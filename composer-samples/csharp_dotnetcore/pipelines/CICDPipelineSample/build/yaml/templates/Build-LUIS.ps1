@@ -33,7 +33,7 @@ if ($PSBoundParameters.Keys.Count -lt 5) {
 }
 
 # Find the lu models for the dialogs configured to use a LUIS recognizer
-$models = Get-LUModels -recognizerType "Microsoft.LuisRecognizer" -crossTrainedLUDirectory $crossTrainedLUDirectory -sourceDirectory $sourceDirectory
+$models = Get-LUModels -recognizerType "Microsoft.CluRecognizer" -crossTrainedLUDirectory $crossTrainedLUDirectory -sourceDirectory $sourceDirectory
 if ($models.Count -eq 0)
 {
     Write-Host "No LUIS models found."
