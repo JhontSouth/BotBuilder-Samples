@@ -13,6 +13,12 @@ This bot was created using [Bot Framework][BF].
 
 ## Prerequisites
 - This project requires a [Language resource](https://aka.ms/create-language-resource) with Custom question answering enabled.
+- [Node.js](https://nodejs.org) version 16.16.0 or higher
+
+    ```bash
+    # determine node version
+    node --version
+    ```
 
 ### Configure knowledge base of the project
 - Follow instructions [here][Quickstart] to create a Custom question answering project. You will need this project's name to be used as `ProjectName` in [.env file](.env).
@@ -113,6 +119,15 @@ You can also filter answers using a bot by passing it metadata and/or source fil
 
     qnaMakerDialog.filters = filters;
     ```    
+
+## Configure Adaptive Cards for Microsoft Teams
+When using the Microsoft Teams channel, you have the option of using Adaptive Cards instead of Hero Cards for CQA responses. To enable these cards, perform the following steps:
+
+1. Update the `botbuilder-ai` package to version `4.21.0` or greater.
+2. Set the `UseTeamsAdaptiveCard` variable in the `.env` file to `true`.
+
+If you do not set the `UseTeamsAdaptiveCard` variable or set it to false, the existing Hero Card implementation will be used.
+
 
 ## Microsoft Teams channel group chat fix
 To get answers from the service when a bot (named as `HelpBot`) is added to a Teams channel or Teams group chat, refer to it as `@HelpBot` `How to build a bot?`.
